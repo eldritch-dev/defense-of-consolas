@@ -18,11 +18,13 @@ do
     Tuple<int, int> bottomCoordinate = CalculateCoordinate(targetRow, targetCol, 3);
     Tuple<int, int> leftCoordinate = CalculateCoordinate(targetRow, targetCol, 4);
 
+    Console.WriteLine("Deploy to: ");
     Console.ForegroundColor = ConsoleColor.Blue;
     Console.WriteLine($"{(topCoordinate.Item1 != 0 ? topCoordinate : none)}");
     Console.WriteLine($"{(rightCoordinate.Item1 != 0 ? rightCoordinate : none)}");
     Console.WriteLine($"{(bottomCoordinate.Item1 != 0 ? bottomCoordinate : none)}");
     Console.WriteLine($"{(leftCoordinate.Item1 != 0 ? leftCoordinate : none)}");
+    Console.Beep();
     Console.ForegroundColor = ConsoleColor.White;
 
     Console.WriteLine("Do you want to deploy a new turret?");
